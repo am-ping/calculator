@@ -9,7 +9,7 @@ document.querySelectorAll('button').forEach(button => {
         let curDisplay = current.textContent
         let preDisplay = previous.textContent
 
-        let operator = localStorage.getItem('operator')
+        let operator = sessionStorage.getItem(button)
 
         // if it's a number
         if (!action) {
@@ -22,11 +22,11 @@ document.querySelectorAll('button').forEach(button => {
         } else if (action !== 'delete' && action !== 'equal' && action !== 'clear') {
             previous.textContent = curDisplay
             current.textContent = ""
-            localStorage.setItem('operator', buttonContent)
+            sessionStorage.setItem(button, buttonContent)
         }
 
         // operate() when both displays have values and action key isn't equal or delete
-        if (preDisplay !== "" && curDisplay !== "" && action == 'add' || action == "subtract" || action === 'divide' || action === 'multiply') {
+        if (preDisplay !== "" && curDisplay !== "" && (action == 'add' || action == "subtract" || action === 'divide' || action === 'multiply') ) {
             previous.textContent = operate()
             current.textContent = ''
         }
