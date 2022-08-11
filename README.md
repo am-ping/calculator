@@ -1,5 +1,5 @@
 # [Calculator](https://am-png.github.io/calculator/)
-Repository of my calculator project
+Repository of my calculator project. Initially forked from [here](https://github.com/leonnoel/100devs-calculator) which is when I started working on it.
 
 ## How It's Made
 **Tech used:** HTML, CSS and JavaScript
