@@ -63,7 +63,7 @@ document.querySelectorAll('button').forEach(button => {
             function subtract() {
                 return result = +n1 - +n2
             }
-            return result
+            return +result.toFixed(2)
         }
 
         if (action === 'clear') {
