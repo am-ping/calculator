@@ -49,11 +49,11 @@ document.querySelectorAll('button').forEach(button => {
             if (operator === '+') result = n1 + n2  //add
             if (operator === '-') result = n1 - n2  //subtract
 
-            return +result.toFixed(2)
+            return Math.round(+result * 1000) / 1000
         }
 
         if (action === 'clear') {
-            document.querySelectorAll("p").forEach(p => p.textContent = "")
+            document.querySelectorAll("div").forEach(p => p.textContent = "")
         }
         
         if (action === 'delete') {

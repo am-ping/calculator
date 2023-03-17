@@ -3,7 +3,7 @@
     padding: 0;
     margin: 0;
     font-family: monospace;
-    font-size:xx-large;
+    font-size: 27px;
 }
 
 body {
@@ -13,9 +13,9 @@ body {
 }
 
 main {
-    background: purple;
-    margin-top: 50px;
-    padding: 10px;
+    background: rgb(46,64,69);
+    margin: 40px 10px;
+    padding: 7px;
     width: 400px;
     border: 3px solid black;
     border-radius: 10px;
@@ -24,12 +24,13 @@ main {
 .display {
     background: white;
     border-radius: 10px;
-    padding: 10px;
+    padding: 5px;
     border: 3px solid black;
     margin: 3px;
+    display: block;
 }
 
-p {
+div {
     display: flex;
     justify-content:end;
     align-items: center;
@@ -38,9 +39,14 @@ p {
     height: 40px;
 }
 
+.current {
+    font-size: 35px;
+}
+
+
 .clear,.delete {
     width: 50%;
-    background: lightblue;
+    background: rgb(131,173,181);
 }
 
 .keys, button, .special {
@@ -50,8 +56,8 @@ p {
 }
 
 button {
-    background: lightgoldenrodyellow;
-    color: purple;
+    background: lightgrey;
+    color: black;
     font-weight: bold;
     width: 30%;
     height: 65px;
@@ -65,7 +71,7 @@ button:active {
 }
 
 .operator {
-    background: rgb(243, 138, 138);
+    background: rgb(221, 119, 136);
 }
 
 .multiply {
