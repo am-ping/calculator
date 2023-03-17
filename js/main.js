@@ -3,7 +3,7 @@ let previous = document.querySelector(".previous")
 
 document.querySelectorAll('button').forEach(button => {
     button.addEventListener('click', () => {
-    
+        window.navigator.vibrate(200)
         let action = button.dataset.action
         let operators = button.dataset.operator
         let buttonContent = button.textContent
