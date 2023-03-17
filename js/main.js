@@ -13,13 +13,13 @@ document.querySelectorAll('button').forEach(button => {
         let operator = sessionStorage.getItem(button)
 
         // if it's a number
-        if (!operators) {
+        if (!operators && !action) {
             if (curDisplay.includes('.') && buttonContent === '.') {
                 current.textContent += ''
             } else {
                 current.textContent += buttonContent
             }
-        // if it's an action key that is not delete, equal or clear
+        // if it's an operator
         } else if (operators) {
             previous.textContent = curDisplay
             current.textContent = ""
@@ -44,19 +44,11 @@ document.querySelectorAll('button').forEach(button => {
             n2 = +curDisplay
             let result
 
-            if (operator ==='/') divide()
-            if (operator === '*') multiply()
-            if (operator === '+') add()
-            if (operator === '-') subtract()
+            if (operator ==='/') result = n1 / n2   //divide
+            if (operator === '*') result = n1 * n2  //multiply
+            if (operator === '+') result = n1 + n2  //add
+            if (operator === '-') result = n1 - n2  //subtract
 
-            const divide = () => result = n1 / n2
-
-            const multiply = () => result = n1 * n2
-
-            const add = () => result = n1 + n2
-
-            const subtract = () => result = n1 - n2
-            
             return +result.toFixed(2)
         }
 
