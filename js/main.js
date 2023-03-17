@@ -17,7 +17,11 @@ document.querySelectorAll('button').forEach(button => {
             if (curDisplay.includes('.') && buttonContent === '.') {
                 current.textContent += ''
             } else {
-                current.textContent += buttonContent
+                if (current.textContent.includes('Undefined')) {
+                    current.textContent = buttonContent
+                } else {
+                    current.textContent += buttonContent
+                }
             }
         // if it's an operator
         } else if (operators) {
@@ -49,7 +53,7 @@ document.querySelectorAll('button').forEach(button => {
             if (operator === '+') result = n1 + n2  //add
             if (operator === '-') result = n1 - n2  //subtract
 
-            return Math.round(+result * 1000) / 1000
+            return result == 'Infinity' ? 'Undefined' : Math.round(+result * 1000) / 1000
         }
 
         if (action === 'clear') {
