@@ -60,8 +60,12 @@ button {
     margin: 3px;
 }
 
+button:active {
+    transform: scale(0.97);
+}
+
 .operator {
-    background: lightcoral;
+    background: rgb(243, 138, 138);
 }
 
 .multiply {
