@@ -5,6 +5,7 @@
     font-family: monospace;
     font-size: 23px;
     letter-spacing: 1px;
+    color: honeydew;
 }
 
 body {
@@ -12,7 +13,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: honeydew;
+    background: rgb(86, 146, 125);
     padding: 0 10px;
     margin: 0;
 }
@@ -32,7 +33,7 @@ main {
 }
 
 .display {
-    background: white;
+    background: honeydew;
     border-radius: 10px;
     padding: 5px;
     border: 3px solid black;
